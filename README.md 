@@ -1,0 +1,79 @@
+JMeter Performance Labs 🚀
+
+A curated collection of advanced JMeter projects, test data, and reports, complete with a sample Node.js application to simulate realistic load testing scenarios.
+
+This repository is designed to demonstrate practical performance engineering skills, moving beyond record-and-playback into professional-grade scripting, frameworks, and integrations.
+
+✨ Highlights
+
+🔄 Correlation → Handle dynamic values (session IDs, tokens)
+
+📑 Parameterization → Data-driven tests using CSVs, UUIDs, timestamps
+
+🔌 Plugins → Enhance JMeter with timers, monitoring, and visualizations
+
+🧩 Modular Framework → Reusable test fragments for scalable scripting
+
+📊 Reports & Analysis → HTML dashboards, listeners, and result files
+
+⚙️ Future → CI/CD pipelines (Jenkins/GitHub Actions) & APM integration
+
+📂 Project Structure
+jmeter-performance-labs/
+│
+├── docs/             # Notes & theory (correlation, parameterization, plugins, etc.)
+├── test-plans/       # JMeter .jmx scripts (organized by week/topic)
+├── data/             # CSV test data
+├── results/          # Test results (.jtl) and HTML reports
+├── lib/              # Extra JMeter plugins/jars
+└── sample-app/       # Node.js app (system under test)
+
+▶️ Getting Started
+1. Run the Sample App
+cd sample-app/backend
+npm install
+npm start
+
+
+👉 App runs on http://localhost:3000
+
+2. Run a JMeter Test (CLI Mode)
+jmeter -n -t test-plans/week1_correlation.jmx \
+       -l results/week1/results.jtl \
+       -e -o results/week1/html_report
+
+📊 Deliverables per Topic
+
+Each learning topic includes:
+
+.jmx scripts in test-plans/
+
+Test data in data/
+
+Results in results/ (JTL + HTML)
+
+Notes in docs/
+
+🗺️ Learning Roadmap
+
+Week 1 → Correlation, Parameterization, CSVs, Plugins, Modular Framework
+
+Week 2 → API Testing with JMeter
+
+Week 3 → Web Application Flow (OpenCart Demo)
+
+Week 4 → Reporting & Analysis
+
+Week 5 → CI/CD Integration (Jenkins/GitHub Actions)
+
+Week 6 → Monitoring Integration (PerfMon, Grafana)
+
+Week 7+ → Mini Projects & Case Studies
+
+🤝 Contributing
+
+This repo is part of my 6-month career upgrade plan to transition into a Cloud-Ready Performance Engineer. Feedback, suggestions, and collaboration ideas are always welcome!
+
+📜 License
+
+MIT License – free to use, learn, and share.

@@ -1,0 +1,91 @@
+# Sample App – Node.js Backend for JMeter & Postman Demos 🚀
+
+This is a simple **Node.js + Express application** created to practice:
+- Correlation (tokens, session handling)
+- Parameterization (CSV, random data)
+- API testing with Postman & JMeter
+
+It supports **Login → Search → Cart → Logout** flow.
+
+---
+
+## 📂 API Endpoints
+
+### 1. Login
+`POST /login`
+
+**Request Body**
+```json
+{
+  "username": "testuser",
+  "password": "pass123"
+}
+Response
+
+json
+Copy code
+{
+  "message": "Login successful",
+  "token": "randomGeneratedToken"
+}
+2. Search
+GET /search?token=<authToken>&q=laptop
+
+Returns a list of matching products.
+
+3. Cart
+POST /cart
+
+Request Body
+
+json
+Copy code
+{
+  "token": "<authToken>",
+  "productId": 1
+}
+4. Logout
+POST /logout
+
+Request Body
+
+json
+Copy code
+{
+  "token": "<authToken>"
+}
+▶️ Run Locally
+Navigate to backend:
+
+bash
+Copy code
+cd sample-app/backend
+Install dependencies:
+
+bash
+Copy code
+npm install
+Start the server:
+
+bash
+Copy code
+npm start
+Server runs at: http://localhost:3000
+
+🧪 Testing
+Using Postman
+Import SampleApp.postman_collection.json into Postman.
+
+Create an environment with:
+
+baseUrl = http://localhost:3000
+
+authToken = (blank)
+
+Run the collection → Login → Search → Cart → Logout.
+
+Using JMeter
+Use .jmx files in ../test-plans with this app as the target system under test.
+
+📜 License
+MIT License – free to use and learn
