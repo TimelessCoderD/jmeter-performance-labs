@@ -32,5 +32,5 @@ Allows the user to extract values from a server response using a Perl-type regul
 ## Extractors
 
 - JSON Extractor → `$.token`
-- Regex Extractor → "token":\s\*"(.+?)"
-- Boundary Extractor → Left="token": ", Right=""
+- Regex Extractor → `"token":\s\*"(.+?)"`
+- Boundary Extractor → `Left="token": ", Right=""`
